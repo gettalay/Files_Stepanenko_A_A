@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет — Реклама+</title>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/Лого.png" alt="Реклама+">
+        </div>
+        <div class="nav-menu">
+            <a href="index.html#about">Об агентстве</a>
+            <a href="index.html#services">Услуги</a>
+            <a href="index.html#cases">Кейсы</a>
+            <a href="index.html#contacts">Контакты</a>
+            <a href="cabinet.html">Личный кабинет</a>
+        </div>
+        <div class="user-info">
+            <span class="user-name">Елена Рогойева</span>
+            <a href="login.html" class="user-avatar-link">
+                <img src="images/avatar4.png" alt="Аватар" class="user-avatar">
+            </a>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="cabinet-wrapper">
+            <aside class="cabinet-sidebar">
+                <nav class="cabinet-menu">
+                    <a class="menu-item active" data-tab="personal">Личная информация</a>
+                    <a class="menu-item" data-tab="company">Моя компания</a>
+                    <a class="menu-item" data-tab="order">Новая заявка</a>
+                    <a class="menu-item" data-tab="current">Текущие заказы</a>
+                    <a class="menu-item" data-tab="archive">Архив заказов</a>
+                </nav>
+            </aside>
+
+            <main class="cabinet-content">
+                <div id="personal" class="tab-content active">
+                    <h2 class="section-title-left">Личная информация о заказчике</h2>
+                    <div class="avatar-section">
+                        <div class="avatar-placeholder">Аватар</div>
+                        <div class="avatar-upload">
+                            <div>Сменить аватар</div>
+                            <div>Загрузить новое изображение</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Имя</label>
+                        <input type="text" class="form-input" placeholder="Иван">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Фамилия</label>
+                        <input type="text" class="form-input" placeholder="Иванов">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Отчество</label>
+                        <input type="text" class="form-input" placeholder="Иванович">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Дата рождения</label>
+                        <input type="date" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Должность в компании</label>
+                        <input type="text" class="form-input" placeholder="Маркетолог">
+                    </div>
+                    <button class="form-btn">Подтвердить информацию</button>
+                </div>
+
+                <div id="company" class="tab-content">
+                    <h2 class="section-title-left">Информация о компании заказчика</h2>
+                    <div class="form-group">
+                        <label class="form-label">Название</label>
+                        <input type="text" class="form-input" placeholder="ООО Реклама">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Сфера деятельности</label>
+                        <input type="text" class="form-input" placeholder="PR и маркетинг">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Дополнительная информация</label>
+                        <input type="text" class="form-input" placeholder="...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <a href="#" class="upload-link" id="uploadLink">Загрузить элементы фирменного стиля</a>
+                        </label>
+                        <div class="files-section">
+                            <div class="files-title">Ваши файлы:</div>
+                            <div class="files-list">
+                                <div class="file-item">
+                                    <img src="images/icon1.png" alt="иконка" class="file-icon">
+                                    <a href="#" class="file-link">Айдентика.zip</a>
+                                </div>
+                                <div class="file-item">
+                                    <img src="images/icon1.png" alt="иконка" class="file-icon">
+                                    <a href="#" class="file-link">Цветовая_палитра.png</a>
+                                </div>
+                                <div class="file-item">
+                                    <img src="images/icon1.png" alt="иконка" class="file-icon">
+                                    <a href="#" class="file-link">Рекламная_кампания.pdf</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="form-btn">Подтвердить информацию</button>
+                </div>
+
+                <div id="order" class="tab-content">
+                    <h2 class="section-title-left">Выберите пакет услуг</h2>
+                    <div class="services-checkbox">
+                        <label class="service-item">
+                            <input type="checkbox" value="consult"> Консультации и сопровождение проекта
+                        </label>
+                        <label class="service-item">
+                            <input type="checkbox" value="digital"> Digital-маркетинг и SMM
+                        </label>
+                        <label class="service-item">
+                            <input type="checkbox" value="seo"> SEO и продвижение сайтов
+                        </label>
+                        <label class="service-item">
+                            <input type="checkbox" value="creative"> Разработка креативной рекламной концепции
+                        </label>
+                    </div>
+                    <button class="form-btn" id="submitOrderBtn">Оформить заказ</button>
+                </div>
+
+                <div id="current" class="tab-content">
+                    <h2 class="section-title-left">Заказы в процессе обработки</h2>
+                    <div class="order-card">
+                        <div class="order-title">Digital-маркетинг и SMM</div>
+                        <div class="order-date">13.07.2025</div>
+                        <div class="order-status status-process">Статус: В ПРОЦЕССЕ</div>
+                    </div>
+                    <div class="order-card">
+                        <div class="order-title">SEO и продвижение сайтов</div>
+                        <div class="order-date">01.08.2025</div>
+                        <div class="order-status status-review">Статус: НА РАССМОТРЕНИИ</div>
+                    </div>
+                </div>
+
+                <div id="archive" class="tab-content">
+                    <h2 class="section-title-left">Архив заказов</h2>
+                    <div class="order-card">
+                        <div class="order-title">Разработка креативной рекламной концепции</div>
+                        <div class="order-date">03.04.2024</div>
+                        <div class="order-status status-cancelled">Статус: ОТМЕНЕНО</div>
+                        <button class="form-btn" style="margin-top: 15px;">Открыть файлы проекта</button>
+                    </div>
+                    <div class="order-card">
+                        <div class="order-title">Разработка креативной рекламной концепции</div>
+                        <div class="order-date">05.04.2024</div>
+                        <div class="order-status status-done">Статус: ВЫПОЛНЕНО</div>
+                        <button class="form-btn" style="margin-top: 15px;">Открыть файлы проекта</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="thankyouModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Спасибо за заявку!</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    Вскоре с вами свяжется наш оператор для уточнения деталей.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="form-btn" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        г. Санкт-Петербург, ул. Садовая, 23<br>
+        © 2002 Реклама + Все права защищены
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
